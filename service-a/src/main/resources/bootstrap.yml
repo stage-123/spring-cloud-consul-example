@@ -1,13 +1,19 @@
 server:
   port: 8080
 
+management:
+  security:
+    enabled: false
+
 spring:
   application:
     name: service-a
   cloud:
     consul:
       discovery:
+        #instance-id: ${spring.application.name}-${spring.application.instance}
         prefer-ip-address: true
+
       host: 127.0.0.1
       port: 8500
       config:
@@ -29,6 +35,8 @@ spring:
     consul:
       discovery:
         prefer-ip-address: true
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
       host: consul
       port: 8500
       config:

@@ -19,6 +19,9 @@ service-b:
 
 service-a:
   image:  spring-cloud-consul-example/service-a
+  environment:
+    - SPRING_APPLICATION_NAME=service-a
+    - SPRING_APPLICATION_INSTANCE={{.Task.Slot}}
   links:
     - "consul"
     - "service-b"

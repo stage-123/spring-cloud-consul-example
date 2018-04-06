@@ -4,8 +4,8 @@ buildscript {
         mavenCentral()
     }
     ext {
-        springBootVersion = '1.4.2.RELEASE'
-        springCloudVersion = 'Camden.SR3'
+        springBootVersion = '1.5.11.RELEASE'
+        springCloudVersion = 'Edgware.SR3'
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")

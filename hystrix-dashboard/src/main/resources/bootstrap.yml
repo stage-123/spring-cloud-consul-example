@@ -1,6 +1,10 @@
 server:
   port: 8050
 
+management:
+  security:
+    enabled: false
+
 spring:
   application:
     name: hystrix-dashboard
