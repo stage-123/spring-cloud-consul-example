@@ -10,6 +10,14 @@ The registry center uses the consul, if you want to use eureka, you can refer to
 https://github.com/yidongnan/spring-cloud-netflix-example
 
 ## Getting Started
+
+Only consul, services and admin.
+```shell
+./gradlew clean build -x test
+./buildDockerImage.sh
+docker-compose -f docker-compose-minimal.yml up -d
+```
+
 ```shell
 ./gradlew clean build -x test
 ./buildDockerImage.sh
